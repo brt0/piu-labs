@@ -55,7 +55,7 @@ nav {
 
 
 
-:is(aside) input[type="text"], :is(aside)input[type="password"] { 
+:is(aside) input[type="text"], :is(aside) input[type="password"] { 
   border: 1px solid gray;
   background-color: cornsilk;
   width:275px;
@@ -63,7 +63,7 @@ nav {
   font-size: 35px;
 }
 
-:is(aside) input[type="text"]:focus, :is(aside)input[type="password"]:focus { 
+:is(aside) input[type="text"]:focus, :is(aside) input[type="password"]:focus { 
   background-color:powderblue;
   border-color: cornflowerblue;
   border-style: solid;
