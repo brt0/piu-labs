@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1</title>
+    <link rel="stylesheet" href="../css/konkurs.css" />
+
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script>
+      let elements;
+      let mode=true;
+    </script>
+
+  </head>
+
+  <body>
+    <main>
+      <div id="main_header"><h1>Zgłoszenie<br>do Konkursu Plastycznego</h1></div>
+      <div id="main_darkmode" title="Zmień motyw"><a onclick="changeTheme()">🌗</a></div>
+      <div id="main_form">
+        <form>
+          <label>Imię:</label>
+          <input class="theme" type="text" maxlength="30" required>
+          <label>Nazwisko:</label>
+          <input class="theme" type="text" maxlength="50" required>
+          <label>Email:</label>
+          <input class="theme" type="email" required>
+
+          <label>Miasto:</label>
+          <input class="theme" type="search" placeholder="Wpisz lub wybierz" list="miasta" required>
+            <datalist id="miasta">
+              <option value="Warszawa"></option>
+              <option value="Kraków"></option>
+              <option value="Gdańsk"></option>
+              <option value="Poznań"></option>
+              <option value="Wrocław"></option>
+            </datalist>
+
+          <label>Data urodzenia:</label>
+          <input class="theme" type="date" required>
+          <label>Liczba zgłaszanych prac (od 1 do 6):</label>
+          <input class="theme" type="number" min="1" max="6" required>
+          <label>Kolor wiodący prac:</label>
+          <input class="theme" type="color" required>
+
+          <label>Kategoria pracy:</label>
+          <select class="theme" name="kategoria" required>
+            <option>-- wybierz kategorię --</option>
+            <option>Rysunek</option>
+            <option>Malarstwo</option>
+            <option>Grafika cyfrowa</option>
+          </select>
+          <br><br>
+
+          <fieldset>
+            <legend>Publikacja pracy online:</legend>
+            <input id="zgoda1" name ="zgoda" type="radio" required>
+            <label for="zgoda1">Tak</label>
+            <br><br>
+            <input class="theme" id="zgoda2" name ="zgoda" type="radio" required>
+            <label for="zgoda2">Nie</label>
+          </fieldset>
+
+          <br>
+          <input  type="checkbox" id="regulamin" required><label for="regulamin">Zgadzam się na regulamin konkursu</label>
+          <input type="submit" value="Wyślij zgłoszenie">
+          <br>
+
+        </form>
+      </div>
+    </main>
+    <a href="../src/index.html">Powrót</a>
+  </body>
+
+</html>

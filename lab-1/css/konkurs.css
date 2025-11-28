@@ -1,0 +1,133 @@
+/* Remove default input tag addons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+
+
+/* Minimalny reset  */
+html {
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+}
+
+body {
+  margin: 1rem;
+  padding: 0;
+}
+
+a {
+  color: #0066cc; /* niebieski kolor linków */
+  text-decoration: none; /* bez podkreślenia */
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline; /* podkreślenie przy najechaniu */
+}
+
+main{
+  max-width: 500px;
+  margin:auto;
+  font-size: 16px;
+}
+
+:is(main) input{
+  font-size: 16px;
+}
+
+#main_header{
+  text-wrap: balance;
+  float:left;
+  width:450px;
+}
+
+#main_darkmode a{
+  font-size: 35px;
+  float:left;
+  width:50px;
+  margin-top: 35px;
+  text-decoration: none;
+}
+
+#main_darkmode a:hover{
+  cursor:pointer;
+}
+
+#main_form{
+  box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
+  clear:both;
+  width:430px;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-right: 40px;
+}
+
+:is(main) p{
+  margin-bottom: 0px;
+}
+
+:is(main) input[type="text"], input[type="email"], input[type="date"], input[type="email"], input[type="number"]{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  width:430px;
+  height:32px;
+  border-color: gray;
+  border-width: 1px;
+}
+
+:is(main) input:focus, select:focus{
+  outline:black;
+  outline-style:solid;
+  outline-width: 2px;
+}
+
+:is(main) select[name="kategoria"], input[type="color"], input[type="search"]{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  width:440px;
+  height:40px;
+  
+  background-color: white;
+  border-color: gray;
+  border-width: 1px;
+}
+
+:is(main) input[type="submit"]{
+  background-color: #77D077;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30px;
+  margin-bottom:30px;
+  width:440px;
+  height:50px;
+  outline:none;
+  border:none;
+  color:white;
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+:is(main) input[type="submit"]:hover{
+  background-color: #45a049;
+  cursor:pointer;
+}
+
+:is(main) label:hover,input:hover{
+  cursor:pointer;
+  text-shadow: none;
+}
+
