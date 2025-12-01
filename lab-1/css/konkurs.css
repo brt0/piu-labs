@@ -10,7 +10,41 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
+:root{
+  --primaryColor: white;
+  --fontColor: black;
+  --borderColor: gray;
+}
 
+#lightmode{
+  display:none;
+}
+
+#darkmode{
+  display:block;
+}
+
+#lighmode:target{
+  --primaryColor: white;
+  --fontColor: black;
+  --borderColor: gray;
+  display:none;
+}
+
+#lightmode:target #darkmode{
+  display:block;
+}
+
+#darkmode:target #lightmode{
+  display:block;
+}
+
+#darkmode:target{
+  --primaryColor: gray;
+  --fontColor: white;
+  --borderColor: black;
+  display:none;
+}
 
 /* Minimalny reset  */
 html {
@@ -51,7 +85,7 @@ main{
   width:450px;
 }
 
-#main_darkmode a{
+#darkmode a, #lighmode a{
   font-size: 35px;
   float:left;
   width:50px;
@@ -59,7 +93,7 @@ main{
   text-decoration: none;
 }
 
-#main_darkmode a:hover{
+#darkmode a:hover, #lightmode a:hover{
   cursor:pointer;
 }
 
@@ -83,7 +117,7 @@ main{
   margin-bottom: 15px;
   width:430px;
   height:32px;
-  border-color: gray;
+  border-color: var(--borderColor);
   border-width: 1px;
 }
 
@@ -100,8 +134,8 @@ main{
   width:440px;
   height:40px;
   
-  background-color: white;
-  border-color: gray;
+  background-color: var(--primaryColor);
+  border-color: var(--borderColor);
   border-width: 1px;
 }
 
@@ -115,7 +149,7 @@ main{
   height:50px;
   outline:none;
   border:none;
-  color:white;
+  color:var(--fontColor);
   font-weight: bold;
   transition: 0.4s;
   border-radius: 5px;
