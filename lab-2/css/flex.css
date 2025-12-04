@@ -25,6 +25,7 @@ header{
   width:auto;
   height:auto;
   overflow: auto;
+  display:flex;
 }
 
 fieldset{

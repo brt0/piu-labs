@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <title>Lab 4</title>
     <link rel="stylesheet" href="css/style.css" />
+    
+    <script src="js/addNote.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/deleteNote.js"></script>
+    <script src="js/newID.js"></script>
+    <script src="js/randColor.js"></script>
+    <script src="js/count.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/reColor.js"></script>
+    <script src="js/reColorAll.js"></script>
+
   </head>
   <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
+    <main>
+      <header onload="counter">
+        <h1>To Do:<span id="todo_counter"></span></h1>
+        <h1>In Progress:<span id="progress_counter"></span></h1>
+        <h1>Finished:<span id="done_counter"></span></h1>
+      </header>
+
+      <div id="todo">
+        <a style="position: absolute; left:2.5vw;" onclick="addNote('todo')">&#10010;</a>
+        <!--Kanban Notes-->
+        <a style="position: absolute; left:31vw;" onclick="reColorAll('#todo')">🖌</a>
+      </div>
+      <div id="progress">
+        <a style="position: absolute; left:35vw;" onclick="addNote('progress')">&#10010;</a>
+         <!--Kanban Notes-->
+        <a style="position: absolute; left:63.5vw;" onclick="reColorAll('#progress')">🖌</a>
+      </div>
+
+      <div id="done">
+        <a style="position: absolute; left:67.5vw;" onclick="addNote('done')">&#10010;</a>
+         <!--Kanban Notes-->
+        <a style="position: absolute; left:96vw;" onclick="reColorAll('#done')">🖌</a>
+      </div>
+    </main>
   </body>
 </html>

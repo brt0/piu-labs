@@ -1,19 +1,146 @@
-/* Minimalny reset  */
 html {
-  font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
-  line-height: 1.5; /* lepsza czytelność */
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  overflow:hidden;
+  background-color:burlywood;
 }
 body {
-  margin: 1rem;
+  margin: 0;
   padding: 0;
 }
 
-a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
-  font-size: 1.4rem;
+.kanban a {
+  color: #5c5b5b;
+  text-decoration: none;
+  cursor:default;
+  transition: 0.5s;
+  font-size: 4vh;
 }
-a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+
+a:hover{
+  color:black;
+}
+
+a{
+  color: #5c5b5b;
+  text-decoration: none;
+  cursor:default;
+  transition: 0.5s;
+  font-size: 3vh;
+}
+
+header{
+  width: 100vw;
+  height: 17vh;
+  background-color:black;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  margin:0;
+  align-content: stretch;
+  vertical-align: middle;
+}
+
+h1{
+  font-size: 10vh;
+  cursor:default;
+  font-family: 'Trebuchet MS', sans-serif;
+  color:white;
+  user-select: none;
+  margin-left:2vw;
+  line-height: 0;
+}
+
+
+main{
+  display:flex;
+  background-color:burlywood;
+  width:100vw;
+  height: 100vh;
+  align-items:stretch;
+  justify-content: space-evenly;
+}
+
+main > div{
+  width:30vw;
+  height:83vh;
+  margin-top:17vh;
+  border-radius: 10px;
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-color:#5c5b5b;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.kanban{
+  margin-top: 3vh;
+  width:12vw;
+  height: 10vw;
+  line-height: 0;
+  border-radius: 2px;
+  border-color:#202122;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow:5px 10px;
+
+  background-color: green;
+}
+
+.kanban input[type="text"]{
+  font-size: 3vh;
+  vertical-align: text-top;
+  text-decoration: underline;
+  width:11vw;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.kanban input[type="text"]:focus{
+  border-color:white;
+  border-radius: 5px;
+  border-style: solid;
+  outline: none;
+  resize: none;
+}
+
+.kanban blockquote{
+  background-color: transparent;
+  margin:0px;
+  margin-top: 1vw;
+  border: none;
+  width: 11vw;
+  height:4vw;
+  font-size: 1vw;
+  resize: none;
+}
+
+.kanban blockquote:focus{
+  border-color:white;
+  border-radius: 5px;
+  border-style: solid;
+  outline: none;
+}
+
+.kanban span{
+  line-height: 3vw;;
+}
+
+#todo{
+  background: #dfe0d7;
+  background: linear-gradient(135deg, rgba(223, 224, 215, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+#progress{
+  background: #43b7e6;
+  background: linear-gradient(135deg, rgba(67, 183, 230, 1) 0%, rgba(165, 230, 250, 1) 100%);
+}
+
+#done{
+  background: #77e643;
+  background: linear-gradient(135deg, rgba(119, 230, 67, 1) 0%, rgba(237, 250, 165, 1) 100%);
 }
